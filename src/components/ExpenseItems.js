@@ -7,16 +7,20 @@
 import "./ExpenseItem.css";
 
 function ExpenseItem() {
+  const expenseDate = new Date(2021, 2, 28);
+  const expenseTitle = "iPhone 13 Pro";
+  const expenseAmount = 294.64;
+
   return (
     /* here we have className instead of just class */
     <div className="expense-item">
       <div className="expense-item__description">
         {" "}
-        <div className="expense-item__date">28 May 2022</div>
-        <h2 className="expense-item__title">iPhone 13s Pro</h2>
+        <div className="expense-item__date">{expenseDate.toDateString()}</div>
+        <h2 className="expense-item__title">{expenseTitle}</h2>
       </div>
 
-      <div className="expense-item__price">524$</div>
+      <div className="expense-item__price">{expenseAmount}$</div>
     </div>
   );
 }
