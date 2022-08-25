@@ -10,14 +10,7 @@
   border-radius: 15px;
   padding: 15px 35px 15px 35px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-  margin-top: 15px;
-}
-
-.expense-item__date {
-  color: rgb(255, 255, 255);
-  display: flex;
-  justify-content: space-between;
-  width: 110px;
+  margin-top: 25px;
 }
 
 .expense-item__description {
@@ -28,15 +21,16 @@
 }
 
 .expense-item__title {
-  font-size: 24px;
+  font-size: 18px;
   color: rgb(255, 255, 255);
   margin-left: 50px;
+  font-weight: 600;
 }
 
 .expense-item__price {
-  color: rgb(0, 0, 0);
+  color: rgb(62, 62, 62);
   font-weight: 800;
-  font-size: 20px;
+  font-size: 18px;
   background-color: rgb(255, 255, 255);
   padding: 15px 35px 15px 35px;
   border-radius: 15px;

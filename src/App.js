@@ -10,7 +10,7 @@ function App() {
   const data = [
     {
       id: "el1",
-      title: "Car",
+      title: "Audi A6",
       date: new Date(2022, 2, 21),
       amount: 34000,
     },
