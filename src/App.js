@@ -3,7 +3,7 @@ App - is a root component. The main and most imporant
 Other created components will be nested inside of it.
 Components in React - is just a JS functions
 */
-import ExpenseItem from "./components/ExpenseItems";
+import Expenses from "./components/Expenses";
 
 function App() {
   // Data to paste into components
@@ -42,22 +42,9 @@ function App() {
         <h2>Let's get started!</h2>
         <p>The random text</p>
         {/* We created our first component and just pasted it here like this. Cool 
-        Now we need to paste data inside of these components. Naming is crucial! */}
-        <ExpenseItem
-          title={data[0].title}
-          date={data[0].date}
-          amount={data[0].amount}
-        ></ExpenseItem>
-        <ExpenseItem
-          title={data[1].title}
-          date={data[1].date}
-          amount={data[1].amount}
-        ></ExpenseItem>
-        <ExpenseItem
-          title={data[2].title}
-          date={data[2].date}
-          amount={data[2].amount}
-        ></ExpenseItem>
+        Now we need to paste data inside of these components. Naming is crucial! 
+        Items will be used inside of Expenses component so do the same naming */}
+        <Expenses items={data}></Expenses>
       </div>
     </div>
   );
