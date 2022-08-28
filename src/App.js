@@ -4,7 +4,7 @@ Other created components will be nested inside of it.
 Components in React - is just a JS functions
 */
 import React from "react";
-import Expenses from "./components/Expenses";
+import Expenses from "./components/Expenses/Expenses";
 
 function App() {
   // Data to paste into components
