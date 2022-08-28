@@ -1,3 +1,5 @@
+import React from "react";
+
 import ExpenseItem from "./ExpenseItems";
 import "./Expenses.css";
 

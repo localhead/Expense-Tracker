@@ -4,6 +4,9 @@
 
 */
 // Adding CSS
+import React from "react";
+
+import Card from "./Card";
 import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate";
 
@@ -12,7 +15,7 @@ import ExpenseDate from "./ExpenseDate";
 function ExpenseItem(props) {
   return (
     /* here we have className instead of just class (like in html)*/
-    <div className="expense-item">
+    <Card className="expense-item">
       <div className="expense-item__description">
         {" "}
         {/* Making Date a different component */}
@@ -20,7 +23,7 @@ function ExpenseItem(props) {
         <h2 className="expense-item__title">{props.title}</h2>
       </div>
       <div className="expense-item__price">{props.amount}$</div>
-    </div>
+    </Card>
   );
 }
 

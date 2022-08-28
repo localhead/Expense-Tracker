@@ -3,6 +3,7 @@ App - is a root component. The main and most imporant
 Other created components will be nested inside of it.
 Components in React - is just a JS functions
 */
+import React from "react";
 import Expenses from "./components/Expenses";
 
 function App() {
