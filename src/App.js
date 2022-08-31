@@ -5,6 +5,7 @@ Components in React - is just a JS functions
 */
 import React from "react";
 import Expenses from "./components/Expenses/Expenses";
+import NewExpanse from "./components/NewExpense/NewExpense";
 
 function App() {
   // Data to paste into components
@@ -40,8 +41,7 @@ function App() {
     <div>
       <div className="application">
         {" "}
-        <h2>Let's get started!</h2>
-        <p>The random text</p>
+        <NewExpanse></NewExpanse>
         {/* We created our first component and just pasted it here like this. Cool 
         Now we need to paste data inside of these components. Naming is crucial! 
         Items will be used inside of Expenses component so do the same naming */}

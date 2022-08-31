@@ -15,7 +15,7 @@ import ExpenseDate from "./ExpenseDate";
 // name we recive from App.js must match!!!
 function ExpenseItem(props) {
   // useState is a React hook. It need dafault state.
-  // Place to argument something what yu want to be changed
+  // Place to argument something what you want to be changed
   // useState returns array of 2 values. 1 - init state, 2 - changed state.
   const [title, setTitle] = useState(props.title);
 
