@@ -20,14 +20,13 @@ const ExpenseForm = function () {
     setAmount(event.target.value);
   };
 
-  const dateChangeHandler = function (event) {
+  const dateChangeHandler = (event) => {
     setDate(event.target.value);
   };
 
-  const submitEventHandler = function (event) {
+  const submitEventHandler = (event) => {
     /* preventing page from default reload */
     event.preventDefault();
-    event.stopPropagation();
 
     const changedData = {
       title: title,
@@ -35,15 +34,16 @@ const ExpenseForm = function () {
       date: new Date(date),
     };
 
+    //clearing inputs after pressing
     setTitle("");
     setAmount("");
     setDate("");
+
     console.log(changedData);
   };
 
   return (
-    /* We do not add onClick on button click event */
-    <form>
+    <form onSubmit={submitEventHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
@@ -62,18 +62,16 @@ const ExpenseForm = function () {
         <div className="new-expense__control">
           <label>Date</label>
           <input
-            required
             type="date"
             min="2019-01-01"
-            max="2030-12-31"
-            onClick={dateChangeHandler}
+            max="2022-12-31"
+            value={date}
+            onChange={dateChangeHandler}
           />
         </div>
       </div>
       <div className="new-expense__actions">
-        <button type="submit" onClick={submitEventHandler}>
-          Add Expense
-        </button>
+        <button type="submit">Add Expense</button>
       </div>
     </form>
   );

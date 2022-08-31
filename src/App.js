@@ -45,7 +45,7 @@ function App() {
         {/* We created our first component and just pasted it here like this. Cool 
         Now we need to paste data inside of these components. Naming is crucial! 
         Items will be used inside of Expenses component so do the same naming */}
-        <Expenses items={data}></Expenses>
+        <Expenses items={data} />
       </div>
     </div>
   );

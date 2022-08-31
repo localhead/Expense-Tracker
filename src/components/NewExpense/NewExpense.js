@@ -1,14 +1,12 @@
 import React from "react";
 
-import "./NewExpense.css";
 import ExpenseForm from "./ExpenseForm";
+import "./NewExpense.css";
 
 const NewExpense = function () {
   return (
-    <div>
-      <form className="new-expense">
-        <ExpenseForm></ExpenseForm>
-      </form>
+    <div className="new-expense">
+      <ExpenseForm />
     </div>
   );
 };
