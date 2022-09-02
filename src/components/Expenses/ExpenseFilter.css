@@ -1,0 +1,18 @@
+.expense-filter {
+  display: flex;
+  justify-content: right;
+  padding: 15px;
+}
+
+.expense-filter__title {
+  margin-right: 20px;
+  margin-top: 3px;
+  font-weight: 600;
+}
+
+.expense-filter__selector {
+  border-radius: 5px;
+  padding: 5px 15px 5px 25px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}

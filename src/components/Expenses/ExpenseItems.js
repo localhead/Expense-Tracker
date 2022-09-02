@@ -4,7 +4,7 @@
 
 */
 // We need useState. It allows
-import React, { useState } from "react";
+import React from "react";
 import Card from "../UI/Card";
 
 // Adding CSS
@@ -17,11 +17,11 @@ function ExpenseItem(props) {
   // useState is a React hook. It need dafault state.
   // Place to argument something what you want to be changed
   // useState returns array of 2 values. 1 - init state, 2 - changed state.
-  const [title, setTitle] = useState(props.title);
+  /*   const [title, setTitle] = useState(props.title);
 
   const bthTitleHandler = function () {
     setTitle("fuck");
-  };
+  }; */
 
   return (
     /* here we have className instead of just class (like in html)*/
@@ -30,13 +30,13 @@ function ExpenseItem(props) {
         {" "}
         {/* Making Date a different component */}
         <ExpenseDate date={props.date}></ExpenseDate>
-        <h2 className="expense-item__title">{title}</h2>
+        <h2 className="expense-item__title">{props.title}</h2>
       </div>
       <div className="expense-item__rigth">
         {" "}
         <div className="expense-item__price">{props.amount}$</div>
         {/* Adding Event lister on button*/}
-        <button onClick={bthTitleHandler}>Change Title</button>
+        {/* <button>Change Title</button> */}
       </div>
     </Card>
   );

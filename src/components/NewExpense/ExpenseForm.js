@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "./ExpenseForm.css";
 
-const ExpenseForm = function () {
+const ExpenseForm = function (props) {
   /* 
     Here we have title (title) that we have initialy empty on form, 
     and a title which we will get after user changes it (setTitle)  
@@ -32,6 +32,7 @@ const ExpenseForm = function () {
       title: title,
       amount: amount,
       date: new Date(date),
+      id: Math.random(),
     };
 
     //clearing inputs after pressing
@@ -39,7 +40,9 @@ const ExpenseForm = function () {
     setAmount("");
     setDate("");
 
-    console.log(changedData);
+    /* here we call function from props */
+    props.onSaveData(changedData);
+    /* console.log(changedData); */
   };
 
   return (
