@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import "./ExpenseForm.css";
+import "./ExpenseFormEmpty";
 
 const ExpenseForm = function (props) {
   /* 
@@ -11,6 +12,7 @@ const ExpenseForm = function (props) {
   const [amount, setAmount] = useState("");
   const [date, setDate] = useState("");
 
+  let cancelBtnFlag = 0;
   /* Saving title value inside of functions */
   const titleChangeHandler = function (event) {
     setTitle(event.target.value);
@@ -45,8 +47,14 @@ const ExpenseForm = function (props) {
     /* console.log(changedData); */
   };
 
+  const resetEventHandler = (event) => {
+    event.preventDefault();
+
+    /*  cancelBtnFlag === 0 ? 1 : 0; */
+  };
+
   return (
-    <form onSubmit={submitEventHandler}>
+    <form onSubmit={submitEventHandler} onReset={resetEventHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
@@ -74,7 +82,12 @@ const ExpenseForm = function (props) {
         </div>
       </div>
       <div className="new-expense__actions">
-        <button type="submit">Add Expense</button>
+        <button type="submit" className="new-expense__actions-submit">
+          Add Expense
+        </button>
+        <button type="reset" className="new-expense__actions-cancel">
+          Cancel
+        </button>
       </div>
     </form>
   );
