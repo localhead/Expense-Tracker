@@ -5,18 +5,19 @@ import ExpenseFormEmpty from "./ExpenseFormEmpty";
 import ExpenseFormVisible from "./ExpenseFormVisible";
 
 const ExpenseForm = function (props) {
-  const [enabled, setDisabled] = useState(0);
+  /* New state for updating UI */
+  const [enabled, setFlag] = useState(0);
 
   const newExtenseDataForm = (savedExpenseData) => {
     props.onSaveData(savedExpenseData);
   };
 
   const changeFlagDisabled = (changedFlag) => {
-    setDisabled(changedFlag);
+    setFlag(changedFlag);
   };
 
   const changeFlagEnabled = (changedFlag) => {
-    setDisabled(changedFlag);
+    setFlag(changedFlag);
   };
 
   return (
@@ -25,7 +26,6 @@ const ExpenseForm = function (props) {
       {enabled === 0 && (
         <ExpenseFormVisible
           onSaveData={newExtenseDataForm}
-          currentFlag={enabled}
           changeFlagFnDis={changeFlagDisabled}
         ></ExpenseFormVisible>
       )}

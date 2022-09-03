@@ -3,6 +3,7 @@ import Card from "../UI/Card";
 
 import ExpenseFilter from "./ExpenseFilter";
 import ExpensesList from "./ExpensesList";
+import ExpensesChart from "./ExpensesChart";
 import "./Expenses.css";
 
 function Expenses(props) {
@@ -37,7 +38,7 @@ function Expenses(props) {
         ></ExpenseFilter>
         {/* This is DUMB component */}
         {/* here we dynamicaly render our hardcoded (yet) data from App.js*/}
-
+        <ExpensesChart expenses={filteredArray}></ExpensesChart>
         <ExpensesList items={filteredArray}></ExpensesList>
       </Card>
     </li>

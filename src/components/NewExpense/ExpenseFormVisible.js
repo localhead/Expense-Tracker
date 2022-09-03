@@ -41,6 +41,7 @@ and a title which we will get after user changes it (setTitle)
 
     /* here we call function from props */
     props.onSaveData(changedData);
+    props.changeFlagFnDis(1);
     /* console.log(changedData); */
   };
 
@@ -55,7 +56,12 @@ and a title which we will get after user changes it (setTitle)
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
-          <input type="text" value={title} onChange={titleChangeHandler} />
+          <input
+            type="text"
+            value={title}
+            onChange={titleChangeHandler}
+            required
+          />
         </div>
         <div className="new-expense__control">
           <label>Amount</label>
@@ -65,6 +71,7 @@ and a title which we will get after user changes it (setTitle)
             step="0.01"
             value={amount}
             onChange={amountChangeHandler}
+            required
           />
         </div>
         <div className="new-expense__control">
@@ -75,6 +82,7 @@ and a title which we will get after user changes it (setTitle)
             max="2022-12-31"
             value={date}
             onChange={dateChangeHandler}
+            required
           />
         </div>
       </div>
