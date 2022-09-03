@@ -7,7 +7,7 @@ import "./Expenses.css";
 
 function Expenses(props) {
   /* We are going to change this vars in ExpenseFilter component*/
-  const [year, setYear] = useState("");
+  const [year, setYear] = useState("2022");
   /* const [dataFiltered, setDataFiltered] = useState(props); */
 
   /* Function that will get data from ExpenseFilter and change it */
