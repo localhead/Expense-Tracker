@@ -16,7 +16,7 @@ and a title which we will get after user changes it (setTitle)
   };
 
   const amountChangeHandler = function (event) {
-    setAmount(event.target.value);
+    setAmount(Number(event.target.value));
   };
 
   const dateChangeHandler = (event) => {
@@ -40,6 +40,7 @@ and a title which we will get after user changes it (setTitle)
     setDate("");
 
     /* here we call function from props */
+    console.log(changedData);
     props.onSaveData(changedData);
     props.changeFlagFnDis(1);
     /* console.log(changedData); */
@@ -69,7 +70,6 @@ and a title which we will get after user changes it (setTitle)
             type="number"
             min="0.01"
             step="0.01"
-            value={amount}
             onChange={amountChangeHandler}
             required
           />

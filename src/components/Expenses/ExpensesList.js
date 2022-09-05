@@ -1,12 +1,14 @@
 import React from "react";
 
 import ExpenseItem from "./ExpenseItems";
+import "./ExpensesList.css";
 
 const ExpensesList = (props) => {
-  if (props.items.length === 0) return <p>No expenses found</p>;
+  if (props.items.length === 0)
+    return <p className="expenses-list__not-found">No expenses found</p>;
 
   return (
-    <ul>
+    <ul className="expenses-list__ul">
       {" "}
       {props.items.length > 0 &&
         props.items.map((prop) => (

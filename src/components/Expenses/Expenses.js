@@ -32,13 +32,17 @@ function Expenses(props) {
     <li>
       <Card className="expenses-content">
         {/* This is SMART component */}
+
         <ExpenseFilter
           selectedYear={year}
           changeYearFn={yearSavingHandler}
         ></ExpenseFilter>
         {/* This is DUMB component */}
         {/* here we dynamicaly render our hardcoded (yet) data from App.js*/}
-        <ExpensesChart expenses={filteredArray}></ExpensesChart>
+        {filteredArray.length != 0 && (
+          <ExpensesChart expenses={filteredArray}></ExpensesChart>
+        )}
+
         <ExpensesList items={filteredArray}></ExpensesList>
       </Card>
     </li>

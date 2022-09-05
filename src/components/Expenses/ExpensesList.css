@@ -1,0 +1,11 @@
+.expenses-list__ul {
+  padding-left: 0px;
+}
+
+.expenses-list__not-found {
+  font-weight: 500;
+  font-size: 22px;
+  padding-top: 30px;
+  margin: 0 auto;
+  color: rgb(51, 51, 51);
+}

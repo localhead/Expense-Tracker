@@ -13,21 +13,28 @@ const dataINIT = [
     id: "el1",
     title: "Audi A6",
     date: new Date(2022, 2, 21),
-    amount: 34000,
+    amount: 12400,
   },
 
   {
     id: "el2",
     title: "iPhone 11",
-    date: new Date(2022, 2, 11),
-    amount: 520,
+    date: new Date(2022, 3, 11),
+    amount: 1520,
   },
 
   {
     id: "el3",
     title: "Laptop",
-    date: new Date(2022, 2, 23),
-    amount: 14200,
+    date: new Date(2022, 8, 23),
+    amount: 2200,
+  },
+
+  {
+    id: "el4",
+    title: "House",
+    date: new Date(2022, 4, 23),
+    amount: 18200,
   },
 ];
 
@@ -37,9 +44,6 @@ function App() {
 
   /* function in which we will save data from NewExpense, which had Saved data from ExpenseForm */
   const dataNewExpenseArrived = (formData) => {
-    console.log("Data in App.js now");
-    console.log(formData);
-
     /* if wee will just add new obj to data array - react wont update the picture. So we need to useState */
     setData((prevData) => {
       return [formData, ...prevData];

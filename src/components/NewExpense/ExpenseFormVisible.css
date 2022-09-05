@@ -13,6 +13,8 @@
 .new-expense__control input {
   width: 250px;
   height: 25px;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
 }
 
 .new-expense__actions {
@@ -25,7 +27,6 @@
 .new-expense__actions button {
   text-transform: uppercase;
   text-decoration: none;
-
   padding: 7px 35px 7px 35px;
   font-size: 18px;
   border-radius: 10px;
@@ -37,6 +38,7 @@
   color: rgb(255, 255, 255);
   font-weight: 600;
   border: none;
+  font-family: "Poppins", sans-serif;
 }
 
 .new-expense__actions-cancel {
@@ -45,6 +47,7 @@
   color: rgb(43, 43, 43);
   font-weight: 500;
   background-color: none;
+  font-family: "Poppins", sans-serif;
 }
 
 .new-expense__actions button:hover {

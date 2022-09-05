@@ -6,7 +6,7 @@ import ExpenseFormVisible from "./ExpenseFormVisible";
 
 const ExpenseForm = function (props) {
   /* New state for updating UI */
-  const [enabled, setFlag] = useState(0);
+  const [enabled, setFlag] = useState(1);
 
   const newExtenseDataForm = (savedExpenseData) => {
     props.onSaveData(savedExpenseData);
