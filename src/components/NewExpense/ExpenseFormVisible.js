@@ -85,14 +85,14 @@ and a title which we will get after user changes it (setTitle)
             required
           />
         </div>
-      </div>
-      <div className="new-expense__actions">
-        <button type="submit" className="new-expense__actions-submit">
-          Add Expense
-        </button>
-        <button type="reset" className="new-expense__actions-cancel">
-          Cancel
-        </button>
+        <div className="new-expense__actions">
+          <button type="submit" className="new-expense__actions-submit">
+            Add Expense
+          </button>
+          <button type="reset" className="new-expense__actions-cancel">
+            Cancel
+          </button>
+        </div>
       </div>
     </form>
   );
