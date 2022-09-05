@@ -1,8 +1,7 @@
 .expense-filter {
   display: flex;
   justify-content: right;
-  padding: 15px;
-  margin-bottom: 15px;
+  padding: 10px;
 }
 
 .expense-filter__title {

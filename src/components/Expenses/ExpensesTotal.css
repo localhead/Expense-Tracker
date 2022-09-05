@@ -1,0 +1,19 @@
+.expenses-total {
+  margin-right: 8px;
+}
+
+.expenses-total__title {
+  display: flex;
+  font-size: 14px;
+  justify-content: right;
+  margin-top: 5px;
+  color: rgb(78, 78, 78);
+}
+
+.expenses-total__total-amount {
+  display: flex;
+  justify-content: right;
+  margin-bottom: 24px;
+  font-size: 18px;
+  font-weight: 600;
+}

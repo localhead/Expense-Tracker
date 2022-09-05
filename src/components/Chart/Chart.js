@@ -12,9 +12,6 @@ const Chart = (props) => {
 
   console.log(props.dataPoints);
 
-  let i = 1;
-  props.dataPoints.map((dataPoint) => (dataPoint.id = "el" + i++));
-
   return (
     <div className="chart">
       {props.dataPoints.map((dataPoint) => (

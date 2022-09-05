@@ -10,6 +10,12 @@
   font-size: 12px;
 }
 
+.chart-bar__persentage {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
 .chart-bar__fill {
   height: 50%;
   display: block;
